@@ -1,0 +1,56 @@
+class PayloadModel {
+  String? name;
+  String? type;
+  bool? reused;
+  String? launch;
+  List<String>? customers;
+  List<String>? nationalities;
+  List<String>? manufacturers;
+  int? massKg;
+  int? massLbs;
+  String? orbit;
+  String? referenceSystem;
+  String? regime;
+  Null? longitude;
+  Null? semiMajorAxisKm;
+  Null? eccentricity;
+  int? periapsisKm;
+  int? apoapsisKm;
+  int? inclinationDeg;
+  Null? periodMin;
+  Null? lifespanYears;
+  Null? epoch;
+  Null? meanMotion;
+  Null? raan;
+  Null? argOfPericenter;
+  Null? meanAnomaly;
+  String? id;
+  PayloadModel.fromJson(Map<String, dynamic> json) {
+    name = json['name'];
+    type = json['type'];
+    reused = json['reused'];
+    launch = json['launch'];
+    customers = json['customers'].cast<String>();
+    nationalities = json['nationalities'].cast<String>();
+    manufacturers = json['manufacturers'].cast<String>();
+    massKg = json['mass_kg'];
+    massLbs = json['mass_lbs'];
+    orbit = json['orbit'];
+    referenceSystem = json['reference_system'];
+    regime = json['regime'];
+    longitude = json['longitude'];
+    semiMajorAxisKm = json['semi_major_axis_km'];
+    eccentricity = json['eccentricity'];
+    periapsisKm = json['periapsis_km'];
+    apoapsisKm = json['apoapsis_km'];
+    inclinationDeg = json['inclination_deg'];
+    periodMin = json['period_min'];
+    lifespanYears = json['lifespan_years'];
+    epoch = json['epoch'];
+    meanMotion = json['mean_motion'];
+    raan = json['raan'];
+    argOfPericenter = json['arg_of_pericenter'];
+    meanAnomaly = json['mean_anomaly'];
+    id = json['id'];
+  }
+}
